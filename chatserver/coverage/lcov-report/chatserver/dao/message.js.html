@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for chatserver/dao/message.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\index.html">All files</a> / <a href="index.html">chatserver/dao</a> message.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const Message = require('../model/message')
+const { getAvatarData } = require('../util/getRandomAvatar')
+const { getFileData } = require('../util/getBinFile')
+const obj = {}
+&nbsp;
+/**
+ * 获取当前联系人的最新15条聊天信息
+ * @param to 当前群组的id
+ * @param limit
+ * @returns {Promise&lt;void&gt;}
+ */
+async function <span class="fstat-no" title="function not covered" >getCurLastMessage(</span>to, type, limit = <span class="branch-0 cbranch-no" title="branch not covered" >15)</span> {
+<span class="cstat-no" title="statement not covered" >    obj[to] = 0</span>
+    let detailMes = <span class="cstat-no" title="statement not covered" >await Message.find({to: to}).sort({createTime: -1}).limit(limit).populate('from', {</span>
+        _id: 1,
+        username: 1,
+        avatar: 1,
+        tag: 1
+    })
+<span class="cstat-no" title="statement not covered" >    detailMes = detailMes.map(<span class="fstat-no" title="function not covered" >el</span>e =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        return convertMessage(ele)</span>
+    })
+<span class="cstat-no" title="statement not covered" >    return detailMes.reverse();</span>
+}
+&nbsp;
+/**
+ * 保存信息
+ * @param data
+ * @returns {Promise&lt;{createTime, style, from, _id, to, content}|{createTime, style, _id, to, content}&gt;}
+ */
+async function <span class="fstat-no" title="function not covered" >saveMessages(</span>data) {
+    let message = <span class="cstat-no" title="statement not covered" >await Message.create({</span>
+        ...data,
+        from: data.from
+    })
+    let detailMes = <span class="cstat-no" title="statement not covered" >await Message.findOne({_id: message._id}).populate('from', {</span>
+        _id: 1,
+        username: 1,
+        avatar: 1,
+        tag: 1
+    })
+<span class="cstat-no" title="statement not covered" >    return convertMessage(detailMes)</span>
+}
+&nbsp;
+/**
+ * 获取所有联系人最后的一条聊天信息
+ * @param linkmanIds
+ * @returns {Promise&lt;{data: *, status: number}&gt;}
+ */
+async function <span class="fstat-no" title="function not covered" >getLinkmansLastMessages(</span>linkmanIds) {
+    const promises = <span class="cstat-no" title="statement not covered" >linkmanIds.map(<span class="fstat-no" title="function not covered" >li</span>nkmanId =&gt;</span>
+<span class="cstat-no" title="statement not covered" >        Message.find(</span>
+            {to: linkmanId},
+            {
+                style: 1,
+                content: 1,
+                createTime: 1,
+                from: 1,
+                to: 1,
+                filename: 1
+            },
+            {
+                sort: {createTime: -1},
+                limit: 15
+            }
+        ).populate('from', {username: 1, avatar: 1, tag: 1})
+    )
+    const results = <span class="cstat-no" title="statement not covered" >await Promise.all(promises)</span>
+    const messages = <span class="cstat-no" title="statement not covered" >linkmanIds.reduce(<span class="fstat-no" title="function not covered" >(r</span>esult, linkmanId, index) =&gt; {</span>
+        const mes = <span class="cstat-no" title="statement not covered" >results[index]</span>
+        const lastMsg = <span class="cstat-no" title="statement not covered" >mes[0];</span>
+<span class="cstat-no" title="statement not covered" >        result[linkmanId] = convertMessage(lastMsg)</span>
+<span class="cstat-no" title="statement not covered" >        return result</span>
+    }, {})
+<span class="cstat-no" title="statement not covered" >    return {status: 200, data: messages};</span>
+}
+&nbsp;
+async function <span class="fstat-no" title="function not covered" >getHistoryMessage(</span>id) {
+    let messages = <span class="cstat-no" title="statement not covered" >await Message.find({to: id}).sort({createTime: -1}).skip((obj[id] + 1) * 15).limit(15).populate('from', {</span>
+        _id: 1,
+        username: 1,
+        avatar: 1,
+        tag: 1
+    })
+<span class="cstat-no" title="statement not covered" >    obj[id] === 0 ? obj[id] ++ : ''</span>
+<span class="cstat-no" title="statement not covered" >    messages = messages.map(<span class="fstat-no" title="function not covered" >el</span>e =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        return convertMessage(ele)</span>
+    })
+<span class="cstat-no" title="statement not covered" >    return messages.reverse();</span>
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >convertMessage(</span>message) {
+<span class="cstat-no" title="statement not covered" >    if (!message) <span class="cstat-no" title="statement not covered" >return ''</span></span>
+    const reg = <span class="cstat-no" title="statement not covered" >/base64/g;</span>
+    const reg2 = <span class="cstat-no" title="statement not covered" >/file/</span>
+    const reg3 = <span class="cstat-no" title="statement not covered" >/image/</span>
+    let temp = <span class="cstat-no" title="statement not covered" >''</span>
+<span class="cstat-no" title="statement not covered" >    if (message.from) {</span>
+<span class="cstat-no" title="statement not covered" >        !reg.test(message.from.avatar) &amp;&amp; (message.from.avatar = getAvatarData(message.from.avatar))</span>
+<span class="cstat-no" title="statement not covered" >        reg2.test(message.content) &amp;&amp; (message.content = JSON.stringify(getFileData(message.content)))</span>
+<span class="cstat-no" title="statement not covered" >        reg3.test(message.content) &amp;&amp; (message.content = getAvatarData(message.content))</span>
+<span class="cstat-no" title="statement not covered" >        return {</span>
+            _id: message._id,
+            style: message.style,
+            content: message.content,
+            createTime: message.createTime,
+            to: message.to,
+            filename: message.filename,
+            fileWidth: message.fileWidth,
+            fileHeight: message.fileHeight,
+            from: {
+                avatar: message.from.avatar,
+                tag: message.from.tag,
+                username: message.from.username,
+                _id: message.from._id
+            }
+        };
+    } else {
+<span class="cstat-no" title="statement not covered" >        return {</span>
+            _id: message._id,
+            style: message.style,
+            content: message.content,
+            createTime: message.createTime,
+            to: message.to,
+        }
+    }
+}
+&nbsp;
+module.exports = {
+    getCurLastMessage,
+    getLinkmansLastMessages,
+    saveMessages,
+    getHistoryMessage
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Apr 17 2020 21:38:10 GMT+0800 (GMT+08:00)
+</div>
+</div>
+<script src="..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\sorter.js"></script>
+</body>
+</html>

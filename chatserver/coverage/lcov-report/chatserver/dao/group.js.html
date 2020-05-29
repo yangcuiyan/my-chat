@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for chatserver/dao/group.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\index.html">All files</a> / <a href="index.html">chatserver/dao</a> group.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const Group = require('../model/group');
+const User = require('../model/user');
+const Message = require('../model/message');
+const config = require('../config');
+const util = require("../util/getRandomAvatar");
+&nbsp;
+require("../util/database");
+&nbsp;
+/**
+ * 创建群组
+ * @param name
+ * @param desc
+ * @param username
+ * @returns {Promise&lt;{msg: string, code: number, data: {creator: (*|creator|{ref, type}), name: *, avatar: (string|*|number|StringConstructor|String|avatar), desc: (*|desc|{default, match, type}|number|SVGDescElement)}}|{msg: string}|{msg: string}|{msg: string}&gt;}
+ */
+async function <span class="fstat-no" title="function not covered" >createGroup(</span>{name, creator, createTime }) {
+<span class="cstat-no" title="statement not covered" >    if(!name) <span class="cstat-no" title="statement not covered" >return {msg: '组名不能为空', status: 400};</span></span>
+    let user = <span class="cstat-no" title="statement not covered" >await User.findOne({_id: creator});</span>
+<span class="cstat-no" title="statement not covered" >    if(!user) <span class="cstat-no" title="statement not covered" >return {msg: '此用户不存在', status: 400};</span></span>
+    let group = <span class="cstat-no" title="statement not covered" >await Group.findOne({name});</span>
+<span class="cstat-no" title="statement not covered" >    if(group) <span class="cstat-no" title="statement not covered" >return {msg: '该群组已存在', status: 400};</span></span>
+    let newGroup = <span class="cstat-no" title="statement not covered" >null;</span>
+    let newMessage = <span class="cstat-no" title="statement not covered" >null;</span>
+<span class="cstat-no" title="statement not covered" >    try {</span>
+<span class="cstat-no" title="statement not covered" >        newGroup= await Group.create({</span>
+            name,
+            creator,
+            createTime,
+            avatar: util.getRandomAvatar(),
+            members: [creator]
+        })
+<span class="cstat-no" title="statement not covered" >        newMessage = await Message.create({</span>
+            to: newGroup._id,
+            style: 'system',
+            content: user.username + '加入群聊',
+            createTime: new Date()
+        })
+    } catch(err) {
+<span class="cstat-no" title="statement not covered" >        throw err;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        _id: newGroup._id,
+        name: newGroup.name,
+        desc: newGroup.desc,
+        avatar: util.getAvatarData(newGroup.avatar),
+        creator: newGroup.creator,
+        createTime: newGroup.createTime,
+        message: {
+            _id: newMessage._id,
+            style: newMessage.style,
+            content: newMessage.content,
+            createTime: newMessage.createTime,
+            to: newMessage.to,
+        }
+    }
+}
+&nbsp;
+/**
+ * 加入群组
+ * @param userId
+ * @param groupId
+ * @returns {Promise&lt;{msg: string}|{msg: string, data: {}}|{msg: string}&gt;}
+ */
+async function <span class="fstat-no" title="function not covered" >joinGroup(</span>{userId, groupId}) {
+    let user = <span class="cstat-no" title="statement not covered" >await User.findOne({_id: userId});</span>
+    let group = <span class="cstat-no" title="statement not covered" >await Group.findOne({_id: groupId});</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if(!group) <span class="cstat-no" title="statement not covered" >return {msg: '加入群组失败，该群组不存在', status: 400}</span></span>
+<span class="cstat-no" title="statement not covered" >    if(group.members.indexOf(user._id) &gt; -1) <span class="cstat-no" title="statement not covered" >return {msg: '你已在群组中', status: 400};</span></span>
+<span class="cstat-no" title="statement not covered" >    group.members.push(user);</span>
+<span class="cstat-no" title="statement not covered" >    await group.save();</span>
+    let newMessage = <span class="cstat-no" title="statement not covered" >await Message.create({</span>
+        to: group._id,
+        style: 'system',
+        content: user.username + '加入群聊',
+        createTime: new Date()
+    })
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        ...convertGroupMsg(group),
+        createTime: group.createTime,
+        type: 1,
+        message: {
+            _id: newMessage._id,
+            style: newMessage.style,
+            content: newMessage.content,
+            createTime: newMessage.createTime,
+            to: newMessage.to,
+        }
+    }
+&nbsp;
+}
+&nbsp;
+/**
+ * 解散群组
+ * @param data
+ * @returns {Promise&lt;{id: *}|{msg: string, status: number}|{msg: string, status: number}&gt;}
+ */
+async function <span class="fstat-no" title="function not covered" >delGroup(</span>data) {
+    let result;
+<span class="cstat-no" title="statement not covered" >    try {</span>
+<span class="cstat-no" title="statement not covered" >        result = await Group.deleteOne({_id: data, isDefault: false})</span>
+    } catch(error) {
+<span class="cstat-no" title="statement not covered" >        if(error) <span class="cstat-no" title="statement not covered" >return {status: 400, msg: '该群组不存在或你没有此权限'}</span></span>
+    }
+<span class="cstat-no" title="statement not covered" >    if(result.n === 0) <span class="cstat-no" title="statement not covered" >return {status: 400, msg: '默认群组不能解散'}</span></span>
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        id: data
+    }
+}
+&nbsp;
+/**
+ * 获取默认群组信息
+ * @returns {Promise&lt;{}|*&gt;}
+ */
+async function <span class="fstat-no" title="function not covered" >getDefaultGroup(</span>) {
+    const group = <span class="cstat-no" title="statement not covered" >await Group.findOne({isDefault: true})</span>
+<span class="cstat-no" title="statement not covered" >    if(group) <span class="cstat-no" title="statement not covered" >return group</span></span>
+    else <span class="cstat-no" title="statement not covered" >return {}</span>
+}
+&nbsp;
+/**
+ * 搜索群组
+ * @param data
+ * @returns {Promise&lt;*&gt;}
+ */
+async function <span class="fstat-no" title="function not covered" >searchGroup(</span>data) {
+    const reg = <span class="cstat-no" title="statement not covered" >new RegExp(data.keyword)</span>
+    let groups = <span class="cstat-no" title="statement not covered" >await Group.find({name: {$regex: reg, $options: 'i'}})</span>
+<span class="cstat-no" title="statement not covered" >    groups = groups.map(<span class="fstat-no" title="function not covered" >gr</span>oup =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        return convertGroupMsg(group)</span>
+    })
+<span class="cstat-no" title="statement not covered" >    return groups;</span>
+}
+&nbsp;
+/**
+ * 获取群组成员
+ * @param data
+ * @returns {Promise&lt;{_id: *, tag: *, avatar, username: *}[]|boolean&gt;}
+ */
+async function <span class="fstat-no" title="function not covered" >getGroupMembers(</span>data) {
+    const group = <span class="cstat-no" title="statement not covered" >await Group.findOne({ name: data })</span>
+<span class="cstat-no" title="statement not covered" >    if(!group) <span class="cstat-no" title="statement not covered" >return false</span></span>
+    const promises = <span class="cstat-no" title="statement not covered" >group.members.map(<span class="fstat-no" title="function not covered" >id</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        return User.findOne({_id: id})</span>
+    })
+    const results = <span class="cstat-no" title="statement not covered" >await Promise.all(promises)</span>
+    const users = <span class="cstat-no" title="statement not covered" >results.map(<span class="fstat-no" title="function not covered" >us</span>er =&gt; <span class="cstat-no" title="statement not covered" >convertUserMsg(user))</span></span>
+<span class="cstat-no" title="statement not covered" >    return users</span>
+}
+&nbsp;
+/**
+ * 转换群组对象
+ * @param group
+ * @returns {{membersNum: number, creator: (*|creator|{ref, type}|number), name: *, _id: *, avatar}}
+ */
+function <span class="fstat-no" title="function not covered" >convertGroupMsg(</span>group) {
+    const reg = <span class="cstat-no" title="statement not covered" >/base64/g;</span>
+<span class="cstat-no" title="statement not covered" >    !reg.test(group.avatar) &amp;&amp; (group.avatar = util.getAvatarData(group.avatar))</span>
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        _id: group._id,
+        name: group.name,
+        avatar: group.avatar,
+        membersNum: group.members.length,
+        creator: group.creator
+    }
+}
+&nbsp;
+/**
+ * 转换用户对象
+ * @param user
+ * @returns {{_id: *, tag: *, avatar, username: *}}
+ */
+function <span class="fstat-no" title="function not covered" >convertUserMsg(</span>user) {
+    const reg = <span class="cstat-no" title="statement not covered" >/base64/g;</span>
+<span class="cstat-no" title="statement not covered" >    !reg.test(user.avatar) &amp;&amp; (user.avatar = util.getAvatarData(user.avatar))</span>
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        _id: user._id,
+        tag: user.tag,
+        username: user.username,
+        avatar:  user.avatar,
+    }
+}
+&nbsp;
+module.exports = {
+    createGroup,
+    joinGroup,
+    getDefaultGroup,
+    searchGroup,
+    getGroupMembers,
+    delGroup
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Apr 17 2020 21:38:10 GMT+0800 (GMT+08:00)
+</div>
+</div>
+<script src="..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\sorter.js"></script>
+</body>
+</html>

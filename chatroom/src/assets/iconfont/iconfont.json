@@ -1,0 +1,135 @@
+{
+  "id": "1685255",
+  "name": "chat",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5810290",
+      "name": "voice",
+      "font_class": "voice",
+      "unicode": "e80d",
+      "unicode_decimal": 59405
+    },
+    {
+      "icon_id": "11981547",
+      "name": "enter",
+      "font_class": "enter",
+      "unicode": "e950",
+      "unicode_decimal": 59728
+    },
+    {
+      "icon_id": "1084683",
+      "name": "add",
+      "font_class": "add",
+      "unicode": "e654",
+      "unicode_decimal": 58964
+    },
+    {
+      "icon_id": "8078279",
+      "name": "msg",
+      "font_class": "msg",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "141979",
+      "name": "send",
+      "font_class": "send",
+      "unicode": "e877",
+      "unicode_decimal": 59511
+    },
+    {
+      "icon_id": "670887",
+      "name": "about",
+      "font_class": "about",
+      "unicode": "e640",
+      "unicode_decimal": 58944
+    },
+    {
+      "icon_id": "1299933",
+      "name": "File transfer-1",
+      "font_class": "9wenjianchuanshu-1",
+      "unicode": "e66c",
+      "unicode_decimal": 58988
+    },
+    {
+      "icon_id": "6664171",
+      "name": "img",
+      "font_class": "img",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "10972089",
+      "name": "share",
+      "font_class": "share",
+      "unicode": "e699",
+      "unicode_decimal": 59033
+    },
+    {
+      "icon_id": "11673570",
+      "name": "error",
+      "font_class": "error",
+      "unicode": "e66f",
+      "unicode_decimal": 58991
+    },
+    {
+      "icon_id": "12025566",
+      "name": "list",
+      "font_class": "list",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "12215082",
+      "name": "emoji",
+      "font_class": "emoji",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "1228826",
+      "name": "search",
+      "font_class": "search",
+      "unicode": "e6c8",
+      "unicode_decimal": 59080
+    },
+    {
+      "icon_id": "1036574",
+      "name": "设置",
+      "font_class": "shezhi",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "7964510",
+      "name": "退出",
+      "font_class": "tuichu",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "825352",
+      "name": "密码",
+      "font_class": "mima54",
+      "unicode": "e673",
+      "unicode_decimal": 58995
+    },
+    {
+      "icon_id": "1613452",
+      "name": "验证码",
+      "font_class": "yanzhengma",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "10939120",
+      "name": "用户名",
+      "font_class": "ico_username",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    }
+  ]
+}

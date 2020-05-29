@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for chatserver/dao/friend.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\index.html">All files</a> / <a href="index.html">chatserver/dao</a> friend.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const Friend = require('../model/friend')
+const { getAvatarData } = require('../util/getRandomAvatar')
+&nbsp;
+async function <span class="fstat-no" title="function not covered" >addFriend(</span>{id, from, to}) {
+<span class="cstat-no" title="statement not covered" >    if (from.username === to.username) <span class="cstat-no" title="statement not covered" >return { status: 400, msg: '不能添加自己为好友' }</span></span>
+    let friend = <span class="cstat-no" title="statement not covered" >await Friend.findOne({ relationId: id, status: 1 })</span>
+<span class="cstat-no" title="statement not covered" >    if (friend) <span class="cstat-no" title="statement not covered" >return { status: 400, msg: '你们已经是好友了' }</span></span>
+<span class="cstat-no" title="statement not covered" >    friend = await Friend.findOne({ relationId: id, status: 0 })</span>
+<span class="cstat-no" title="statement not covered" >    if(friend &amp;&amp; friend.from.toString() !== from._id) <span class="cstat-no" title="statement not covered" >return {status: 400, msg: '对方正在请求添加你为好友，请进行回复'}</span></span>
+    else <span class="cstat-no" title="statement not covered" >if(friend) <span class="cstat-no" title="statement not covered" >return {</span></span>
+        id: friend.relationId,
+        from: friend.from,
+        to: friend.to,
+        createTime: friend.createTime,
+        status: friend.status
+    }
+    let newFriend = <span class="cstat-no" title="statement not covered" >null;</span>
+<span class="cstat-no" title="statement not covered" >    try {</span>
+<span class="cstat-no" title="statement not covered" >        newFriend = await Friend.create({</span>
+            relationId: id,
+            from: from,
+            to: to,
+            createTime: new Date(),
+            status: 0
+        })
+    } catch(err) {
+<span class="cstat-no" title="statement not covered" >        console.log(err)</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        id: newFriend.relationId,
+        from: newFriend.from,
+        to: newFriend.to,
+        createTime: newFriend.createTime,
+        status: newFriend.status
+    }
+}
+&nbsp;
+async function <span class="fstat-no" title="function not covered" >updateFriend(</span>{ id, status }) {
+    const friend = <span class="cstat-no" title="statement not covered" >await Friend.findOne({ relationId: id })</span>
+<span class="cstat-no" title="statement not covered" >    friend.status = status</span>
+<span class="cstat-no" title="statement not covered" >    friend.save();</span>
+<span class="cstat-no" title="statement not covered" >    return friend</span>
+}
+&nbsp;
+async function <span class="fstat-no" title="function not covered" >findFriendByToIds(</span>ids) {
+    const promises = <span class="cstat-no" title="statement not covered" >ids.map(<span class="fstat-no" title="function not covered" >id</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        return Friend.find({$or: [{to: id}, {from: id}]}).populate('from', {</span>
+            _id: 1,
+            username: 1,
+            avatar: 1,
+            tag: 1
+        }).populate('to', {
+            _id: 1,
+            username: 1,
+            avatar: 1,
+            tag: 1
+        })
+    })
+    let results = <span class="cstat-no" title="statement not covered" >await Promise.all(promises)</span>
+<span class="cstat-no" title="statement not covered" >    results = ids.reduce(<span class="fstat-no" title="function not covered" >(r</span>esult, id, index) =&gt; {</span>
+        let relationId
+<span class="cstat-no" title="statement not covered" >        results[index] = results[index].map(<span class="fstat-no" title="function not covered" >fr</span>iend =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            friend = convertFriend(friend)</span>
+<span class="cstat-no" title="statement not covered" >            relationId = friend.id</span>
+<span class="cstat-no" title="statement not covered" >            return friend</span>
+        })
+<span class="cstat-no" title="statement not covered" >        result[relationId] = results[index]</span>
+<span class="cstat-no" title="statement not covered" >        return result</span>
+    }, {})
+<span class="cstat-no" title="statement not covered" >    return results</span>
+}
+&nbsp;
+async function <span class="fstat-no" title="function not covered" >findFriendByTo(</span>id) {
+    let friends = <span class="cstat-no" title="statement not covered" >await Friend.find({to: id, status: 0}).populate('from', {</span>
+        _id: 1,
+        username: 1,
+        avatar: 1,
+        tag: 1
+    }).populate('to', {
+        _id: 1,
+        username: 1,
+        avatar: 1,
+        tag: 1
+    })
+<span class="cstat-no" title="statement not covered" >    friends = friends.map(<span class="fstat-no" title="function not covered" >fr</span>iend =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        return convertFriend(friend)</span>
+    })
+<span class="cstat-no" title="statement not covered" >    return friends</span>
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >convertFriend(</span>friend) {
+    const reg = <span class="cstat-no" title="statement not covered" >/base64/g;</span>
+<span class="cstat-no" title="statement not covered" >    !reg.test(friend.from.avatar) &amp;&amp; (friend.from.avatar = getAvatarData(friend.from.avatar))</span>
+<span class="cstat-no" title="statement not covered" >    !reg.test(friend.to.avatar) &amp;&amp; (friend.to.avatar = getAvatarData(friend.to.avatar))</span>
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        id: friend.relationId,
+        from: {
+            _id: friend.from._id,
+            username: friend.from.username,
+            avatar: friend.from.avatar,
+            tag: friend.from.tag
+        },
+        to: {
+            _id: friend.to._id,
+            username: friend.to.username,
+            avatar: friend.to.avatar,
+            tag: friend.to.tag
+        },
+        createTime: friend.createTime,
+        status: friend.status
+    }
+}
+&nbsp;
+module.exports = {
+    addFriend,
+    updateFriend,
+    findFriendByToIds,
+    findFriendByTo
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Apr 17 2020 21:38:10 GMT+0800 (GMT+08:00)
+</div>
+</div>
+<script src="..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\sorter.js"></script>
+</body>
+</html>
